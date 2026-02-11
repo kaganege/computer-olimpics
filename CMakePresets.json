@@ -1,0 +1,26 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "Visual Studio 2022 x64",
+            "displayName": "Visual Studio Derleme Araçları 2022 Release - amd64",
+            "description": "Visual Studio 17 2022 için derleyiciler kullanılıyor (x64 mimarisi)",
+            "generator": "Visual Studio 17 2022",
+            "toolset": "host=x64",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/out/build/",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/",
+                "CMAKE_C_COMPILER": "cl.exe"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Visual Studio 2022 x64-debug",
+            "displayName": "Visual Studio Derleme Araçları 2022 Release - amd64 - Debug",
+            "configurePreset": "Visual Studio 2022 x64",
+            "configuration": "Debug"
+        }
+    ]
+}
