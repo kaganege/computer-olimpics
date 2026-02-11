@@ -37,7 +37,7 @@ binary_tree_t* bt_create_with_left_right(int root, int left, int right)
     return tree;
 }
 
-void bt_dump_inner(binary_tree_t* tree, uint8_t level, bt_node_t type)
+static void bt_dump_inner(binary_tree_t* tree, uint8_t level, bt_node_t type)
 {
     if (tree == NULL)
         return;
