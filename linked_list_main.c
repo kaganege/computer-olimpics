@@ -57,10 +57,9 @@ char main()
 
     ll_dump(list); // [3]
 
-    char* remained_value = (char*)malloc(sizeof(char));
-    ll_to_array(list, remained_value, 1);
-    printf("Remained value: %c\n", *remained_value); // 3
-    free(remained_value);
+    char remained_value;
+    ll_to_array(list, &remained_value, 1);
+    printf("Remained value: %c\n", remained_value); // 3
 
     ll_clear(list);
     ll_dump(list); // []
