@@ -19,7 +19,7 @@
 #define OPTION_UNWRAP_OR(option, default_value) \
         OPTION_OP(option, unwrap_or, &(typeof(option.data)){default_value});
 #define OPTION_UNWRAP_OR_ELSE(option, default_fn) OPTION_OP(option, unwrap_or_else, default_fn)
-#define OPTION_EXPECT(option, message) OPTION_OP(option, expect, message)
+#define OPTION_EXPECT(option, message) OPTION_OP(option, expect, _CRT_WIDE(message))
 
 struct option {
     bool is_some;

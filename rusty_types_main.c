@@ -16,7 +16,7 @@ int main()
     op = OPTION_SOME(custom, 'a');
     assert(op.is_some == true);
 
-    char value = OPTION_EXPECT(op, L"It's a DDOS attack!");
+    char value = OPTION_EXPECT(op, "It's a DDOS attack!");
     assert(value == 'a');
 
     printf("Success\n");
