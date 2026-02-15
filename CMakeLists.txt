@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10.0)
 project(computer_olympics LANGUAGES C)
+set_property(GLOBAL PROPERTY C_STANDARD 23)
+add_compile_options(/std:clatest)
 
 add_subdirectory(lib)
 
@@ -25,3 +27,7 @@ target_link_libraries(graph_test PRIVATE graph)
 add_executable(custom_linked_list)
 target_sources(custom_linked_list PRIVATE custom_linked_list.c)
 target_link_libraries(custom_linked_list PRIVATE linked_list)
+
+add_executable(rusty_types_test)
+target_sources(rusty_types_test PRIVATE rusty_types_main.c)
+target_link_libraries(rusty_types_test PRIVATE rusty_types)
